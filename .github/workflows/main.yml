@@ -6,10 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Upload ftp
-      uses: dennisameling/ftp-upload-action@v1
+    - name: Upload bundle
+      uses: bayssmekanique/action-simple-file-upload@v1
       with:
-        server: files.000webhost.com
-        username: projetnf083
-        password: iCwpRiCu7(Pxzz((Ent*
-        server_dir: public_html/
+       user: projetnf083
+       password: iCwpRiCu7(Pxzz((Ent*
+       host: files.000webhost.com
+       dest: public_html/
