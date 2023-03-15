@@ -7,9 +7,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Upload bundle
-      uses: bayssmekanique/action-simple-file-upload@v1
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-       user: projetnf083
+       username: projetnf083
        password: iCwpRiCu7(Pxzz((Ent*
-       host: files.000webhost.com
-       dest: public_html/
+       server: files.000webhost.com
+       server-dir: public_html/
