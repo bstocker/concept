@@ -7,9 +7,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Upload bundle
-      uses: sebastianpopp/ftp-action@releases/v2
+      uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
       with:
-       user: projetnf083
-       password: iCwpRiCu7(Pxzz((Ent*
-       host: files.000webhost.com
-       remoteDir: "public_html/"
+       ftp_host: ${{ secrets.FTP_HOST }}
+       ftp_username: projetnf083
+       ftp_password: iCwpRiCu7(Pxzz((Ent*
+       dist_target_dir: "public_html/"
+       delete: "true"
+       exclude: "'^logs/' '^README.md'"
